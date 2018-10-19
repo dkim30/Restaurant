@@ -1,0 +1,30 @@
+
+{{ review | json }}
+
+<div class="review">
+
+        <div *ngIf="review.errors" >
+                <h1>{{ review.errors.yourName.message}}</h1>
+                <h1>{{ review.errors.stars.message }}</h1>
+                <h1>{{ review.errors.description.message }}</h1>
+            </div>
+            
+            <form (submit)="create( $event )" >
+                <p>Customer:</p>
+                <p><input type="text" placeholder="Name" name="restaurant.yourName" [(ngModel)]="restaurant.name" /></p>
+                <p>Description:</p>
+                <p><input type="text" placeholder="Description" name="restaurant.description" [(ngModel)]="restaurant.description" /></p>
+                <p>Stars</p>
+                <p><select name="stars" id="stars">
+                    <option value="1">1 star</option>
+                    <option value="2">2 star</option>
+                    <option value="3">3 star</option>
+                    <option value="4">4 star</option>
+                    <option value="5">5 star</option>
+                </select></p>
+            
+                <input class="btn1" type="submit" value="Cancel" />
+                <input class="btn2" type="submit" value="Submit" />
+            </form>
+</div>
+

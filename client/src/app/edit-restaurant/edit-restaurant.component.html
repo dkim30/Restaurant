@@ -1,0 +1,23 @@
+
+{{ restaurant | json }}
+
+<h3>Edit a restaurant</h3>
+
+<div class="edit">
+
+        <div *ngIf="restaurant.errors" >
+                <h1>{{ restaurant.errors.name.message}}</h1>
+                <h1>{{ restaurant.errors.cuisine.message }}</h1>
+            </div>
+            
+            <form (submit)="update( $event )" >
+                <p>Name:</p>
+                <p><input type="text" placeholder="Name" name="restaurant.name" [(ngModel)]="restaurant.name" /></p>
+                <p>Cuisine:</p>
+                <p><input type="text" placeholder="Cuisine" name="restaurant.cuisine" [(ngModel)]="restaurant.cuisine" /></p>
+            
+                <input class="btn1" type="submit" value="Cancel" />
+                <input class="btn2" type="submit" value="Register" />
+            </form>
+</div>
+

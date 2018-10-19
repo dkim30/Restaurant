@@ -1,0 +1,28 @@
+.restaurants{
+    width: 500px;
+    margin: auto;
+}
+
+.btn1{
+    background-color: forestgreen;
+    color: white;
+    padding: 10px;
+}
+
+.btn2{
+    background-color: plum;
+    color: white;
+    padding: 5px;
+}
+
+.btn3{
+    background-color: orange;
+    color:white;
+    padding: 5px;
+}
+
+.btn4{
+    background-color: lightcoral;
+    color: white;
+    padding: 5px;
+}

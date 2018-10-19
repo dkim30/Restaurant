@@ -1,0 +1,13 @@
+button{
+    background-color: forestgreen;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.reviews{
+    margin: auto;
+    border: 1px solid black;
+    width: 500px;
+}

@@ -1,0 +1,23 @@
+
+{{ restaurant | json }}
+
+<h3>Register a restaurant</h3>
+
+<div class="new">
+    
+    <form (submit)="create( $event )" >
+        <p>Restaurant Name:</p>
+        <p><input type="text" placeholder="Name" name="restaurant.name" [(ngModel)]="restaurant.name" /></p>
+
+        <div *ngIf="restaurant.errors" >
+                <h1>{{ restaurant.errors.name.message}}</h1>
+                <h1>{{ restaurant.errors.cuisine.message }}</h1>
+        </div>
+
+        <p>Cuisine:</p>
+        <p><input type="text" placeholder="Cuisine" name="restaurant.cuisine" [(ngModel)]="restaurant.cuisine" /></p>
+    
+        <input class="btn1" type="submit" value="Cancel" />
+        <input class="btn2" type="submit" value="Register" />
+    </form>
+</div>
